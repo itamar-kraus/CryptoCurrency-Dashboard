@@ -1,0 +1,50 @@
+#cards {
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+#cards > .card {
+  flex-basis: calc(35% - 1rem);
+}
+
+.card {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px #ffd369;
+}
+
+.usd_24h_change {
+  color: rgb(209, 79, 79);
+}
+
+.usd_24h_vol {
+  color: rgb(109, 158, 34);
+}
+
+.usd {
+  color: rgb(20, 145, 145);
+}
+
+.usd_market_cap {
+  color: rgb(20, 145, 145);
+}
+
+#coinsellector {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+#coinsellector option {
+  background-color: transparent;
+  color: #333;
+  padding: 8px;
+}
+
+#coinsellector option:checked {
+  background-color: transparent;
+  font-weight: bolder;
+}
