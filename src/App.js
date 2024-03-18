@@ -1,5 +1,10 @@
 import { Header } from "./Header/Header";
 import { Home } from "./Home/Home";
+import { About } from "./About/About";
+import { Contact } from "./Contact/Contact";
+import { FAQ } from "./FAQ/FAQ";
+import { News } from "./News/News";
+
 
 function App() {
   return (
