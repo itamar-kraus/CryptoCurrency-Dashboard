@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export const ToggleTheme = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Starts in dark mode
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   const handleChangeMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <div className="w-9">
-      {isDarkMode ? (
+    <div className="w-9 cursor-pointer">
+      {!isDarkMode ? (
         <img
           src="./icons/darkmode.png"
           alt="Dark Mode"

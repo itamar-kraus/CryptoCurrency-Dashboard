@@ -1,7 +1,9 @@
 #cards {
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the container */
 }
 
 #cards > .card {
@@ -9,11 +11,26 @@
 }
 
 .card {
+  flex: 0 1 calc(50% - 20px); /* Subtract the gap from the 50% width to have 2 cards per line */
+  height: 100px; /* Set a fixed height to make the cards square */
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 1px 2px #ffd369;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .card {
+    flex: 0 1 calc(100% - 20px); /* Make cards take full width on smaller screens */
+  }
+}
+
 
 .usd_24h_change {
   color: rgb(209, 79, 79);
