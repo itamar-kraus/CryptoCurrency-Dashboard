@@ -25,7 +25,7 @@ export const CryptoChart = ({ selectedCoin }) => {
   }, [selectedCoin?.id]);
 
   return (
-    <div id="chart-container" className="p-6 rounded-lg shadow-md">
+    <div id="chart-container" className="p-6 rounded-lg shadow-md w-3/4 mx-auto">
       <canvas id="line-chart" className="w-full"></canvas>
     </div>
   );
