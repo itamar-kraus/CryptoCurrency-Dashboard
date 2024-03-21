@@ -36,20 +36,22 @@ export const SelectCrypto = ({ setSelectedCoin }) => {
   };
 
   return (
-    <select
-      id="coinsellector"
-      className="dark:bg-gray-700 w-200"
-      onChange={handleChangeSelect}
-    >
-      {cryptoCoins.map((cryptoCoin) => (
-        <option
-          key={cryptoCoin.id}
-          id={cryptoCoin.id}
-          value={cryptoCoin.sybmol}
-        >
-          {cryptoCoin.symbol}
-        </option>
-      ))}
-    </select>
+    <div>
+      <select
+        id="coinsellector"
+        className="dark:bg-gray-700 w-200"
+        onChange={handleChangeSelect}
+      >
+        {cryptoCoins.map((cryptoCoin) => (
+          <option
+            key={cryptoCoin.id}
+            id={cryptoCoin.id}
+            value={cryptoCoin.sybmol}
+          >
+            {cryptoCoin.symbol}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
