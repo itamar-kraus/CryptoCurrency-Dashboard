@@ -26,6 +26,7 @@ export const CryptoCards = ({ selectedCoin }) => {
 
   useEffect(() => {
     const getCoinCardData = async () => {
+      if (!selectedCoin?.id) return
       try {
         const query =
           "simple/price?ids=" +
@@ -43,6 +44,7 @@ export const CryptoCards = ({ selectedCoin }) => {
     getCoinCardData();
   }, [selectedCoin?.id]);
 
+  
   return (
     <div id="cards" className="cards">
       {cryptoDataCards.map((card, index) => {
