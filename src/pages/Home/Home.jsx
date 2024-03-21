@@ -7,7 +7,7 @@ export const Home = () => {
   const [selectedCoin, setSelectedCoin] = useState(null);
 
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <h2 className="center-align">Web Crypto Project</h2>
       <p>Select CryptoCurrency</p>
       <SelectCrypto setSelectedCoin={setSelectedCoin} />

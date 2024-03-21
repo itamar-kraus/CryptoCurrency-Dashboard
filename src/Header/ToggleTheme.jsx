@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useMode } from "../modeContext";
 
 export const ToggleTheme = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Starts in dark mode
+  const { isDarkMode, changeMode } = useMode();
 
   useEffect(() => {
     if (isDarkMode) {
@@ -14,7 +15,7 @@ export const ToggleTheme = () => {
   }, [isDarkMode]);
 
   const handleChangeMode = () => {
-    setIsDarkMode(!isDarkMode);
+    changeMode();
   };
 
   return (
