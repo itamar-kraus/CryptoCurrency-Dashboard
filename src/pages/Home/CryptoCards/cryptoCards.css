@@ -16,7 +16,8 @@
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 2px #ffd369;
+  /* box-shadow: 0 1px 2px #ffd369; */
+  box-shadow: 0 1px 2px #a632e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +32,6 @@
     flex: 0 1 calc(100% - 20px); /* Make cards take full width on smaller screens */
   }
 }
-
 
 .usd_24h_change {
   color: rgb(209, 79, 79);

@@ -1,0 +1,22 @@
+.faq-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  /* Adjust the following margin if necessary to align the arrow with the text */
+  margin-left: 10px;
+}
+
+.faq-arrow.open {
+  transform: rotate(90deg);
+}

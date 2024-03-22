@@ -39,7 +39,7 @@ export const SelectCrypto = ({ setSelectedCoin }) => {
     <div>
       <select
         id="coinsellector"
-        className="dark:bg-gray-700 w-200"
+        className="dark:bg-gray-700 w-56 h-8 text-gray-800 dark:text-white"
         onChange={handleChangeSelect}
       >
         {cryptoCoins.map((cryptoCoin) => (
