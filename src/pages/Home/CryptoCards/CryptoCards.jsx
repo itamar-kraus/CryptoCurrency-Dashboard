@@ -4,29 +4,42 @@ import "./cryptoCards.css";
 
 const cryptoDataCards = [
   {
-    name: "usd",
+    name: "USD",
     class: "usd",
   },
   {
-    name: "usd market cap",
+    name: "USD Market cap",
     class: "usd_market_cap",
   },
   {
-    name: "usd 24h vol",
+    name: "USD 24h vol",
     class: "usd_24h_vol",
   },
   {
-    name: "usd 24h change",
+    name: "USD 24h change",
     class: "usd_24h_change",
   },
 ];
+
+const NumberWithKSuffix = ({ number }) => {
+  const formatNumberWithKSuffix = (number) => {
+    const formatter = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      compactDisplay: "short",
+      maximumFractionDigits: 1, // Control the number of digits after the decimal
+    });
+    return formatter.format(number);
+  };
+
+  return <span>{formatNumberWithKSuffix(number)}</span>;
+};
 
 export const CryptoCards = ({ selectedCoin }) => {
   const [coinCardData, setCoinCardData] = useState(null);
 
   useEffect(() => {
     const getCoinCardData = async () => {
-      if (!selectedCoin?.id) return
+      if (!selectedCoin?.id) return;
       try {
         const query =
           "simple/price?ids=" +
@@ -44,15 +57,14 @@ export const CryptoCards = ({ selectedCoin }) => {
     getCoinCardData();
   }, [selectedCoin?.id]);
 
-  
   return (
     <div id="cards" className="cards">
       {cryptoDataCards.map((card, index) => {
         return (
           <div key={card.name} className="card">
-            <p>{card.name}</p>
+            <p className=" text-gray-800 dark:text-white">{card.name}</p>
             <p className={card.class} id={`card_${index}`}>
-              {coinCardData?.[card.class]}
+              <NumberWithKSuffix number={coinCardData?.[card.class]} />
             </p>
           </div>
         );
