@@ -1,0 +1,68 @@
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the container */
+}
+
+#cards > .card {
+  flex-basis: calc(35% - 1rem);
+}
+
+.card {
+  flex: 0 1 calc(50% - 20px); /* Subtract the gap from the 50% width to have 2 cards per line */
+  height: 100px; /* Set a fixed height to make the cards square */
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 1px 2px #ffd369; */
+  box-shadow: 0 1px 2px #a632e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .card {
+    flex: 0 1 calc(100% - 20px); /* Make cards take full width on smaller screens */
+  }
+}
+
+.usd_24h_change {
+  color: rgb(209, 79, 79);
+}
+
+.usd_24h_vol {
+  color: rgb(109, 158, 34);
+}
+
+.usd {
+  color: rgb(20, 145, 145);
+}
+
+.usd_market_cap {
+  color: rgb(20, 145, 145);
+}
+
+#coinsellector {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+#coinsellector option {
+  background-color: transparent;
+  color: #333;
+  padding: 8px;
+}
+
+#coinsellector option:checked {
+  background-color: transparent;
+  font-weight: bolder;
+}
