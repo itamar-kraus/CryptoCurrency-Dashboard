@@ -6,6 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Getting Started
+
+To run the server, follow these simple steps:
+
+1. Open your terminal.
+2. Navigate to the directory containing the server file.
+3. Execute the following command:
+
+   ```bash
+   node server_file_path.cjs
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
