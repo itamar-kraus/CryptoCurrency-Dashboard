@@ -34,12 +34,22 @@ export const Header = () => {
         ))}
       </div>
       <button className="sm:hidden" onClick={toggleMenu}>
-        {isMenuOpen ? "Close" : "Menu"}
+      {!isMenuOpen ? (
+        <img
+          src="./icons/menuopen.png"
+          className="w-9"
+        />
+      ) : (
+        <img
+          src="./icons/menuclosed.png"
+          className="w-9"
+        />
+      )}
       </button>
       {isMenuOpen && (
         <div
           id="mobileMenu"
-          className="absolute top-[56px] left-0 bg-blue-300 p-3 hidden w-full z-10"
+          className="absolute top-[68px] left-0 bg-gradient-to-r from-purple-300 p-3 hidden z-10 w-screen"
         >
           {tabs.map((tab) => (
             <Link
