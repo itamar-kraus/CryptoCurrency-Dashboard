@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       {isStarted ? (
-        <div className="App dark:bg-gradient-to-r from-gray-800 to-sky-950 h-screen overflow-y-auto flex flex-col">
+        <div className="App dark:bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-900 via-slate-900 to-zinc-900 h-screen overflow-y-auto flex flex-col">
           <Header />
           <div className="p-4 flex-1">
             <Routes>
@@ -36,7 +36,7 @@ function App() {
             //   padding: "140px",
             //   gap: "100px",
           }}
-          className="h-screen bg-gradient-to-r from-gray-800 to-sky-950 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
+          className="h-screen  bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-900 via-slate-900 to-zinc-900 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
         >
           <h1
             style={{

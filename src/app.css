@@ -23,20 +23,20 @@ body {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
+    #e4861b,
+    #ff9a27,
+    #ffa45a,
+    #ffe284,
+    #ffe284,
+    #fff6cf,
+    #60dfff,
+    #6792ee,
+    #3e61d3
   );
   position: absolute;
   top: -2px;
   left: -2px;
-  background-size: 400%;
+  background-size: 500%;
   z-index: -1;
   filter: blur(5px);
   -webkit-filter: blur(5px);
