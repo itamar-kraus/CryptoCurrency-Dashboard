@@ -36,7 +36,7 @@ function App() {
             //   padding: "140px",
             //   gap: "100px",
           }}
-          className="h-screen bg-gray-700 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
+          className="h-screen bg-gradient-to-r from-gray-800 to-sky-950 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
         >
           <h1
             style={{
@@ -45,7 +45,7 @@ function App() {
               fontWeight: "bold",
               fontFamily: "'Monospace', 'Courier New', Courier, monospace",
             }}
-            className="text-4xl sm:text-6xl font-bold font-mono"
+            className="text-4xl sm:text-7xl font-mono font-bold mb-4 bg-gradient-to-r from-blue-600 via-pink-700 to-indigo-400 inline-block text-transparent bg-clip-text"
           >
             WELCOME TO B1 PROJECT
           </h1>
