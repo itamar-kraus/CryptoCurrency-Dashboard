@@ -104,7 +104,7 @@ const FAQ = () => {
   return (
     <div className="tab-content  text-gray-800 dark:text-white">
       <h2 className="center-align text-4xl font-bold mb-4 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-800 via-purple-500 to-purple-800 text-transparent bg-clip-text">
-        Contact Us
+        Q&A
       </h2>
       <p className="mb-8 text-2xl">
         Find answers to common questions about our products and services.
