@@ -4,11 +4,9 @@ import {Typewriter} from "../../Utils/Typewriter";
 export const About = () => {
   const render_paragraph = () => (
     <p className="text-lg text-gray-800 dark:text-white">
-      <Typewriter text="Welcome to B1, your trusted source for comprehensive cryptocurrency 
-      insights. At B1, we are committed to providing you with a cutting-edge
-      Cryptocurrency Dashboard that empowers you with real-time and historical
-      data of various cryptocurrencies. Our mission is to simplify the
-      complexities of the cryptocurrency market and offer you a user-friendly platform." speed={20} />
+      <Typewriter text="Welcome to B1, your trusted source for comprehensive cryptocurrency insights.
+      At B1, we are committed to providing you with a cutting-edge Cryptocurrency Dashboard that empowers you with real-time and historical data of various cryptocurrencies.
+      Our mission is to simplify the complexities of the cryptocurrency market and offer you a user-friendly platform." speed={20} />
     </p>
   );
 
@@ -59,7 +57,7 @@ export const About = () => {
         {render_key_features()}
         {render_ourteam()}
       </div>
-      <div className="w-full md:w-1/2 p-4 flex justify-center items-center">
+      <div className="md:w-1/2 p-4 flex justify-center items-center">
         <img
           src="/CryptoNice.png"
           alt="appLogo"

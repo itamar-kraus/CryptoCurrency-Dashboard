@@ -5,14 +5,16 @@ export const Typewriter = ({ text, speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    let timer;
+
     if (currentIndex < text.length) {
-      const timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setDisplayText((prevText) => prevText + text[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }, speed);
-
-      return () => clearTimeout(timer);
     }
+
+    return () => clearTimeout(timer);
   }, [currentIndex, speed, text]);
 
   return <span>{displayText}</span>;
