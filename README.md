@@ -11,13 +11,22 @@ In the project directory, you can run:
 To run the server, follow these simple steps:
 
 1. Open your terminal.
-2. Navigate to the directory containing the server file.
 3. Execute the following command:
 
    ```bash
    node server_file_path.cjs
 
 
+To run the server, follow these simple steps:
+
+1. Open your terminal.
+3. Execute the following commands:
+
+   ```bash
+   cd client
+   npm start
+
+   
 ### `npm start`
 
 Runs the app in the development mode.\
