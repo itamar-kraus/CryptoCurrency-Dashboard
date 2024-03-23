@@ -8,7 +8,7 @@ export const Home = () => {
 
   return (
     <div className="flex flex-col h-full">
-      <h2 className="center-align text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-pink-700 to-indigo-400 inline-block text-transparent bg-clip-text">
+      <h2 className="center-align text-4xl font-bold mb-4 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-800 via-purple-500 to-purple-800 text-transparent bg-clip-text">
         Web Crypto Project
       </h2>
       <p className="font-semibold text-gray-800 dark:text-white">

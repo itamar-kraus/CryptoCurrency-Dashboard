@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <div
       id="header"
-      className="bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-900 via-slate-900 to-zinc-900 text-white p-4 flex justify-between items-center"
+      className="bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-neutral-900 via-zinc-900 to-zinc-950 text-white p-4 flex justify-between items-center"
     >
       <div id="desktopMenu" className="justify-start gap-4 hidden sm:flex">
         {tabs.map((tab) => (

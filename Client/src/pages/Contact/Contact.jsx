@@ -44,8 +44,8 @@ export const Contact = () => {
   return (
     <div className="tab-content font boldtext-gray-800 dark:text-white">
       <div id="contact-header">
-        <h1 className="sm:text-6xl center-align text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-pink-700 to-indigo-400 inline-block text-transparent bg-clip-text">
-          GET IN TOUCH
+        <h1 className="center-align text-4xl font-bold mb-4 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-800 via-purple-500 to-purple-800 text-transparent bg-clip-text">
+          Contact Us
         </h1>
       </div>
       <div id="contact-details" className="text-gray-800 dark:text-white">
