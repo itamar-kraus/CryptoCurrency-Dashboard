@@ -2,7 +2,7 @@
   font-family: "Courier New", Courier, monospace;
 } */
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .start-button {
   padding: 2em 6em;
@@ -68,4 +68,8 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.logo {
+  filter: drop-shadow(0 0 3rem rgb(156, 27, 156));
 }

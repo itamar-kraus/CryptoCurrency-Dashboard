@@ -42,13 +42,13 @@ function App() {
             style={{
               // fontSize: "60px",
               textAlign: "center",
-              fontWeight: "normal"
+              fontWeight: "normal",
             }}
             className="text-4xl sm:text-6xl mb-4 bg-purple-300 inline-block text-transparent bg-clip-text"
           >
             WELCOME TO B1 PROJECT
           </h1>
-          <div className="h-64 w-64 sm:h-96 sm:w-96">
+          <div className="logo h-64 w-64 sm:h-96 sm:w-96">
             <img src="/CryptoNice.png" alt="appLogo" />
           </div>
           <button
