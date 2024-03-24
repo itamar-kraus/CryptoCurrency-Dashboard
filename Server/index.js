@@ -11,7 +11,9 @@ app.use(cors());
 
 app.use(express.json());
 
-
+app.get('/', (req, res) => {
+  res.send('Welcome to CryptoNice !');
+});
 
 // Replace the uri string with your MongoDB connection string.
 const uri = "mongodb+srv://CryptoNiceDB:BoT8pLph3Yogj7Em@cryptonicedb.6u9gmdm.mongodb.net/?retryWrites=true&w=majority&appName=CryptoNiceDB";
