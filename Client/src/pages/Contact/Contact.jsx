@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./contact.css";
+import {Host,Port} from "../../Config/config";
 
 export const Contact = () => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ export const Contact = () => {
     console.log(name, email, message);
 
     try {
-      const response = await axios.post("http://localhost:3000/CryptoInfo", {
+      const response = await axios.post(`http://${Host}:${Port}/CryptoInfo`, {
         name,
         email,
         message,

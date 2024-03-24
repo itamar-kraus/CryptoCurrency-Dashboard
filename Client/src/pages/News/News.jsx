@@ -68,6 +68,7 @@
 // export default News;
 
 import React, { useState, useEffect } from "react";
+import {Host,Port} from "../../Config/config";
 
 export const News = () => {
   const [newsArray, setNewsArray] = useState([]);
@@ -76,7 +77,7 @@ export const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch("http://localhost:3000/News");
+        const response = await fetch(`http://${Host}:${Port}/News`);
         if (!response.ok) {
           throw new Error("Failed to fetch news");
         }
