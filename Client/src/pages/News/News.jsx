@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Host,Port} from "../../Config/config";
+import {host,port} from "../../Config/config";
 
 export const News = () => {
   const [newsArray, setNewsArray] = useState([]);
@@ -8,7 +8,7 @@ export const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(`https://${Host}:${Port}/News`);
+        const response = await fetch(`https://${host}:${port}/News`);
         if (!response.ok) {
           throw new Error("Failed to fetch news");
         }
