@@ -8,7 +8,7 @@ export const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(`http://${Host}:${Port}/News`);
+        const response = await fetch(`https://${Host}:${Port}/News`);
         if (!response.ok) {
           throw new Error("Failed to fetch news");
         }

@@ -12,7 +12,7 @@ export const Contact = () => {
     console.log(name, email, message);
 
     try {
-      const response = await axios.post(`http://${Host}:${Port}/CryptoInfo`, {
+      const response = await axios.post(`https://${Host}:${Port}/CryptoInfo`, {
         name,
         email,
         message,
