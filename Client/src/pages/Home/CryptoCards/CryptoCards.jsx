@@ -50,7 +50,7 @@ export const CryptoCards = ({ selectedCoin }) => {
         setCoinCardData(coinCardData[selectedCoin?.id]);
       } catch (error) {
         console.error("Error:", error);
-        throw error;
+        alert(error.message);
       }
     };
 

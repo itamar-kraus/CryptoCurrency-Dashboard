@@ -32,6 +32,26 @@ export const CryptoChart = ({ selectedCoin }) => {
     ],
   };
 
+  // useEffect(() => {
+  //   const getGraphData = async () => {
+  //     try {
+  //       if (!selectedCoin?.id) return;
+
+  //       const coinData = await makeApiRequest(
+  //         `coins/${selectedCoin?.id}/market_chart?vs_currency=usd&days=365&interval=daily&precision=5`
+  //       );
+
+  //       const chartPrices = coinData.prices.map((subList) => subList[1]);
+
+  //       setChartData(chartPrices);
+  //     } catch (err) {
+  //       console.warn(err);
+  //     }
+  //   };
+
+  //   getGraphData();
+  // }, [selectedCoin?.id]);
+
   useEffect(() => {
     const getGraphData = async () => {
       try {
@@ -42,10 +62,11 @@ export const CryptoChart = ({ selectedCoin }) => {
         );
 
         const chartPrices = coinData.prices.map((subList) => subList[1]);
-
         setChartData(chartPrices);
       } catch (err) {
         console.warn(err);
+
+        alert(err.message);
       }
     };
 
