@@ -36,7 +36,7 @@ function App() {
             //   padding: "140px",
             //   gap: "100px",
           }}
-          className="h-screen  bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-950 via-neutral-900 to-zinc-950 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
+          className="min-h-screen  bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-950 via-neutral-900 to-zinc-950 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
         >
           <h1
             style={{
@@ -52,7 +52,7 @@ function App() {
             <img src="/CryptoNice.png" alt="appLogo" />
           </div>
           <button
-            className="start-button flex justify-center items-center h-20 w-40 sm:h-96 sm:w-96"
+            className="start-button flex justify-center items-center h-20 w-40 sm:w-96"
             onClick={() => setIsStarted(true)}
           >
             Get started
