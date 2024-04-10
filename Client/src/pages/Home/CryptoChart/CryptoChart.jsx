@@ -3,6 +3,8 @@ import { makeApiRequest } from "../utils";
 import { Line } from "react-chartjs-2";
 import { useMode } from "../../../modeContext";
 
+// Utility function to compute a date given an index relative to the start of the current year.
+// This function is used to generate labels for the X-axis of the chart.
 const getDateAtIndex = (index) => {
   const currentYear = new Date().getFullYear();
   const currentDate = new Date(currentYear, 0, 1);
@@ -10,13 +12,17 @@ const getDateAtIndex = (index) => {
   return currentDate;
 };
 
+// Generate an array of dates for the year to serve as labels for the chart
 const newDays = Array.from({ length: 365 }, (_, i) => getDateAtIndex(i));
 
+// CryptoChart Component
+// This component is responsible for rendering a line chart that shows the price history of a selected cryptocurrency over the last year.
 export const CryptoChart = ({ selectedCoin }) => {
   const { isDarkMode } = useMode();
 
   const [chartData, setChartData] = useState([]);
 
+  // Chart.js configuration object for the chart data
   const data = {
     labels: newDays,
     datasets: [
@@ -32,26 +38,7 @@ export const CryptoChart = ({ selectedCoin }) => {
     ],
   };
 
-  // useEffect(() => {
-  //   const getGraphData = async () => {
-  //     try {
-  //       if (!selectedCoin?.id) return;
-
-  //       const coinData = await makeApiRequest(
-  //         `coins/${selectedCoin?.id}/market_chart?vs_currency=usd&days=365&interval=daily&precision=5`
-  //       );
-
-  //       const chartPrices = coinData.prices.map((subList) => subList[1]);
-
-  //       setChartData(chartPrices);
-  //     } catch (err) {
-  //       console.warn(err);
-  //     }
-  //   };
-
-  //   getGraphData();
-  // }, [selectedCoin?.id]);
-
+  // Effect hook to fetch cryptocurrency data when the selectedCoin changes
   useEffect(() => {
     const getGraphData = async () => {
       try {
@@ -70,9 +57,10 @@ export const CryptoChart = ({ selectedCoin }) => {
       }
     };
 
-    getGraphData();
+    getGraphData(); // Invoke the data fetching function
   }, [selectedCoin?.id]);
 
+  // Chart.js configuration object for the chart options
   const options = {
     responsive: true,
     maintainAspectRatio: true,
@@ -105,6 +93,7 @@ export const CryptoChart = ({ selectedCoin }) => {
     },
   };
 
+  // Render the line chart with the configured data and options
   return (
     <div
       id="chart-container"

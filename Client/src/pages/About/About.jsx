@@ -1,15 +1,22 @@
 import React from "react";
-import {Typewriter} from "../../Utils/Typewriter";
+// Import the Typewriter component for typewriter effect in text
+import { Typewriter } from "../../Utils/Typewriter";
 
+// Define the About component
 export const About = () => {
+  // Render a paragraph with a typewriter effect describing the purpose of B1
   const render_paragraph = () => (
     <p className="text-lg text-gray-800 dark:text-white">
-      <Typewriter text="Welcome to B1, your trusted source for comprehensive cryptocurrency insights.
+      <Typewriter
+        text="Welcome to B1, your trusted source for comprehensive cryptocurrency insights.
       At B1, we are committed to providing you with a cutting-edge Cryptocurrency Dashboard that empowers you with real-time and historical data of various cryptocurrencies.
-      Our mission is to simplify the complexities of the cryptocurrency market and offer you a user-friendly platform." speed={20} />
+      Our mission is to simplify the complexities of the cryptocurrency market and offer you a user-friendly platform."
+        speed={20}
+      />
     </p>
   );
 
+  // Render key features offered by B1
   const render_key_features = () => (
     <div className="my-4">
       <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -36,6 +43,7 @@ export const About = () => {
     </div>
   );
 
+  // Render information about the B1 team
   const render_ourteam = () => (
     <div className="mt-4">
       <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -50,6 +58,7 @@ export const About = () => {
     </div>
   );
 
+  // Main component render method
   return (
     <div className="container mx-auto p-6 flex flex-wrap items-start">
       <div className="w-full md:w-1/2 p-4">
