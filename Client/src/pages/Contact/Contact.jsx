@@ -1,26 +1,32 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./contact.css";
-import {host,port} from "../../Config/config";
+import { host, port } from "../../Config/config";
 
+// Define the Contact component
 export const Contact = () => {
+  // State hooks for managing form input values
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  // Function to handle the click event of the send message button
   const onClickSendMessage = async () => {
     console.log(name, email, message);
 
     try {
+      // Use axios to send a POST request to the server with form data
       const response = await axios.post(`https://${host}:${port}/CryptoInfo`, {
         name,
         email,
         message,
       });
-
+      // Check if the request was successful
       if (response.status >= 200 && response.status < 300) {
         console.log(response.data.message); // Log the response message from the server
+        // Notify the user that the message was successfully sent
         alert(`${name}, thank you for sending us a message!`);
+        // Reset form fields
         setName("");
         setEmail("");
         setMessage("");
@@ -31,11 +37,11 @@ export const Contact = () => {
       console.error("Error:", error);
     }
   };
-
+  // Function to validate form inputs
   const validateForm = () => {
-    return name.trim() !== "" && email.trim() !== "" && message.trim() !== "";
+    return name.trim() !== "" && email.trim() !== "" && message.trim() !== ""; // Ensure all fields are filled out
   };
-
+  // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!validateForm()) {
@@ -44,7 +50,7 @@ export const Contact = () => {
     }
     onClickSendMessage();
   };
-
+  // Render the contact form
   return (
     <div className="tab-content font boldtext-gray-800 dark:text-white">
       <div id="contact-header">
@@ -53,7 +59,6 @@ export const Contact = () => {
         </h1>
       </div>
       <div id="contact-details" className="text-gray-800 dark:text-white mb-4">
-        {/* <strong className="text-xl sm:text-2xl">Email: </strong> */}
         <div className="flex items-center text-xl sm:text-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { useState } from "react";
 import { Typewriter } from "../../Utils/Typewriter";
 import "./FAQ.css";
@@ -41,42 +40,14 @@ const faqArray = [
   },
 ];
 
-// export const FAQ = () => {
-//   const renderFAQ = (question, answer) => {
-//     return (
-//       <div className="mb-4">
-//         <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-//           {question}
-//         </h3>
-//         <p className="text-gray-800 dark:text-white">{answer}</p>
-//       </div>
-//     );
-//   };
-
-//   return (
-//     <div className="tab-content text-center text-gray-800 dark:text-white">
-//       <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-//       <p className="mb-8">
-//         Find answers to common questions about our products and services.
-//       </p>
-//       <div id="faq-list">
-//         {faqArray.map((faqItem, index) => (
-//           <div key={index} className="text-gray-800 dark:text-white">
-//             {renderFAQ(faqItem.question, faqItem.answer)}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FAQ;
-
+// FAQItem Component
+// This component represents a single FAQ item, including a question and its answer.
+// It uses useState to track whether the answer to the question is visible (expanded).
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleFAQ = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Toggle the visibility of the answer
   };
 
   return (
@@ -115,6 +86,9 @@ const FAQItem = ({ question, answer }) => {
   );
 };
 
+// FAQ Component
+// This component renders the entire FAQ section, utilizing the FAQItem component
+// for each question and answer pair.
 const FAQ = () => {
   return (
     <div className="tab-content  text-gray-800 dark:text-white">

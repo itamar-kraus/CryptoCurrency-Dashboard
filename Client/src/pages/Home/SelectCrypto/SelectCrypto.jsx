@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { makeApiRequest } from "../utils";
 
+// SelectCrypto Component
+// This component is responsible for fetching a list of top cryptocurrencies, displaying them in a dropdown,
+// and setting the selected cryptocurrency in the parent component's state.
 export const SelectCrypto = ({ setSelectedCoin }) => {
   const [cryptoCoins, setCryptoCoins] = useState([]);
 
@@ -29,12 +32,14 @@ export const SelectCrypto = ({ setSelectedCoin }) => {
     getTopCoinsByUSDValue();
   }, [setCryptoCoins, setSelectedCoin]);
 
+  // Event handler for when a new cryptocurrency is selected from the dropdown
   const handleChangeSelect = (event) => {
     const id = event.target.value;
     const selectedCoin = cryptoCoins.find((coin) => coin.symbol === id);
     setSelectedCoin(selectedCoin);
   };
 
+  // Rendering the component
   return (
     <div>
       <select

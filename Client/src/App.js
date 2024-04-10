@@ -4,17 +4,17 @@ import { Header } from "./Header/Header";
 import { Home } from "./pages/Home/Home";
 import { About } from "./pages/About/About";
 import { Contact } from "./pages/Contact/Contact";
-// import { FAQ } from "./pages/FAQ/FAQ";
 import FAQ from "./pages/FAQ/FAQ";
 import { News } from "./pages/News/News";
 import "./app.css";
 
 function App() {
-  const [isStarted, setIsStarted] = useState(false);
+  const [isStarted, setIsStarted] = useState(false); // State to track whether the app has been started
 
   return (
     <BrowserRouter>
       {isStarted ? (
+        // Main application content
         <div className="App dark:bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-950 via-neutral-900 to-zinc-950 h-screen overflow-y-auto flex flex-col">
           <Header />
           <div className="p-4 flex-1">
@@ -28,19 +28,17 @@ function App() {
           </div>
         </div>
       ) : (
+        // Welcome screen content
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            //   padding: "140px",
-            //   gap: "100px",
           }}
           className="min-h-screen  bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-950 via-neutral-900 to-zinc-950 flex flex-col items-center p-10 sm:p-28 gap-12 sm:gap-24"
         >
           <h1
             style={{
-              // fontSize: "60px",
               textAlign: "center",
               fontWeight: "normal",
             }}
