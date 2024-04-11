@@ -26,3 +26,11 @@ Node.js, Express.js, MongoDB
 ### APIs:
 CoinGecko API for cryptocurrency data, News API for news feeds
 
+
+## NOTE:
+in server/index.js 
+If user wants to run the server locally -> disable rows 3-4-5 and enable rows 7-8-9.
+Instraction are also provided in the code.
+### please make sure the relevant modules are installed
+* server: nodejs, mongodb, express, cors, require.
+* client: reactjs, chartjs, axios, tailwind.
